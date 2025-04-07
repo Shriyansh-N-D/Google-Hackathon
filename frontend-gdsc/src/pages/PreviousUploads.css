@@ -1,0 +1,50 @@
+.previous-uploads-container {
+    padding: 40px;
+    background-color: var(--background);
+    min-height: 100vh;
+    color: var(--text);
+  }
+  
+  .uploads-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4a6741;
+  }
+  
+  .no-uploads-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    color: gray;
+  }
+  
+  .uploads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 10px;
+  }
+  
+  .upload-card {
+    background-color: #f0f5eb;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .upload-image,
+  .upload-video {
+    max-width: 100%;
+    border-radius: 15px;
+    height: auto;
+  }
+  
+  .upload-text {
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
