@@ -109,13 +109,6 @@ src/
 - Theme customization
 - Responsive design for all devices
 
-## Support
-
-For technical support or queries:
-
-- Email: tech@flagguard.com
-- Support: support@flagguard.com
-- Phone: +1 (555) 123-4567 (Mon-Fri, 9AM-6PM EST)
 
 ## Contributing
 
