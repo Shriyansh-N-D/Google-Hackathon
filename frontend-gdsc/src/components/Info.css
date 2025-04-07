@@ -1,0 +1,161 @@
+.info-container {
+  min-height: 100vh;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.info-container.dark {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.info-container.light {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.info-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.dark .info-title {
+  background: var(--gradient-glow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--neon-glow);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.info-card {
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.dark .info-card {
+  background: rgba(0, 255, 242, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.light .info-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+}
+
+.light .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contact-item .icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.contact-item .detail h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.contact-item .detail p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.faq-item p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.guide-steps {
+  padding-left: 20px;
+}
+
+.guide-steps li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.guide-steps li::marker {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.info-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.info-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.info-card:nth-child(3) {
+  animation-delay: 0.3s;
+} 

@@ -1,17 +1,25 @@
-import { Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Upload from "./pages/Upload";
-import PreviousUploads from "./pages/PreviousUploads"; // or correct path
-
-<Route path="/previous-uploads" element={<PreviousUploads />} />
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import Login from './components/Login';
+import Register from './components/Register';
+import Upload from './components/Upload';
+import History from './components/History';
+import Info from './components/Info';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/upload" element={<Upload />} />
-    </Routes>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/upload" element={<Upload />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/info" element={<Info />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

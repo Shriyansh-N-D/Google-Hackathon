@@ -1,3 +1,145 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  /* Theme Colors - Dark */
+  --dark-primary: #00fff2;
+  --dark-secondary: #7700ff;
+  --dark-bg: #0a0a0a;
+  --dark-text: #ffffff;
+  --dark-border: #00fff2;
+  
+  /* Theme Colors - Light */
+  --light-primary: #556B2F;
+  --light-secondary: #8B9B6B;
+  --light-bg: #F5F5F0;
+  --light-text: #2C3E50;
+  --light-border: #556B2F;
+  
+  /* Effects */
+  --neon-glow: 0 0 10px rgba(0, 255, 242, 0.5),
+               0 0 20px rgba(0, 255, 242, 0.3),
+               0 0 30px rgba(0, 255, 242, 0.1);
+  --neon-glow-intense: 0 0 10px rgba(0, 255, 242, 0.8),
+                       0 0 20px rgba(0, 255, 242, 0.6),
+                       0 0 30px rgba(0, 255, 242, 0.4),
+                       0 0 40px rgba(0, 255, 242, 0.2);
+  --light-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --light-shadow-intense: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme Transitions */
+body,
+button,
+input,
+a,
+div {
+  transition: all 0.3s ease;
+}
+
+/* Dark Theme Styles */
+.dark {
+  --primary-color: var(--dark-primary);
+  --secondary-color: var(--dark-secondary);
+  --background-color: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --border-color: var(--dark-border);
+  --shadow: var(--neon-glow);
+  --hover-shadow: var(--neon-glow-intense);
+  --gradient-primary: linear-gradient(135deg, var(--dark-primary) 0%, var(--dark-secondary) 100%);
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Light Theme Styles */
+.light {
+  --primary-color: var(--light-primary);
+  --secondary-color: var(--light-secondary);
+  --background-color: var(--light-bg);
+  --text-color: var(--light-text);
+  --border-color: var(--light-border);
+  --shadow: var(--light-shadow);
+  --hover-shadow: var(--light-shadow-intense);
+  --gradient-primary: linear-gradient(135deg, var(--light-primary) 0%, var(--light-secondary) 100%);
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+/* Common Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dark button {
+  background: transparent;
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text);
+  box-shadow: var(--neon-glow);
+}
+
+.light button {
+  background: var(--light-primary);
+  color: white;
+  border: none;
+  box-shadow: var(--light-shadow);
+}
+
+.dark button:hover {
+  background: var(--dark-primary);
+  color: var(--dark-bg);
+  box-shadow: var(--neon-glow-intense);
+}
+
+.light button:hover {
+  background: var(--light-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--light-shadow-intense);
+}
+
+/* Common Input Styles */
+input {
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.dark input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text);
+}
+
+.light input {
+  background: white;
+  border: 1px solid var(--light-border);
+  color: var(--light-text);
+}
+
+.dark input:focus {
+  box-shadow: var(--neon-glow);
+}
+
+.light input:focus {
+  box-shadow: var(--light-shadow);
+  border-color: var(--light-secondary);
+}
