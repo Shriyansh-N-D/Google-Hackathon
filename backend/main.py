@@ -62,20 +62,7 @@ async def handle_text_pipeline(text: str):
             "explanation": explanation
         }
 
-    # Uncomment below if misinfo model is implemented
-    # is_fake = check_misinformation(text)
-    # print(f"[DEBUG] check_misinformation() result: {is_fake}")
-    #
-    # if is_fake:
-    #     reason = "misinformation"
-    #     explanation = generate_explanation(reason)
-    #     return {
-    #         "pipeline": "text",
-    #         "harmful": False,
-    #         "misinformation": True,
-    #         "decision": "flagged",
-    #         "explanation": explanation
-    #     }
+    
 
     return {
         "pipeline": "text",
